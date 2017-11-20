@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" 
+    	href="/stylesheets/wide.css" 
+    	type="txt/css"
+    	media="only screen and (min-width: 530px) and (min-device-width 481px)"> 
+    <link rel="stylesheet" 
+    	href="/stylesheets/smartphone.css" 
+    	type="txt/css"
+    	media="only screen and (max-width: 480px)"> 
+  </head>
+  <body>
+  	<div id="page-wrap">
+  		<head class="main" id="h1">
+  			<h2> Quiz: El juego de las preguntas</h2>
+  		</head>
+  		<nav class="main" id="n1" role="navigation">
+  			<a href="/">Inicio</a>
+  			<a href="/quizes/question">Preguntas</a>
+  		</nav>
+  		<section class="main" id="s1">
+   	<%- body %> 
+  		</section>
+  		<footer class="main" id="f1"> Pie </footer>
+  	</div>
+  </body>
+</html>
