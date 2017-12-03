@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>< Quizzzz></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" 
     	href="/stylesheets/wide.css" 
@@ -14,15 +14,15 @@
   </head>
   <body>
   	<div id="page-wrap">
-  		<head class="main" id="h1">
+  		<header class="main" id="h1">
   			<h2> Quiz: El juego de las preguntas</h2>
-  		</head>
+  		</header>
   		<nav class="main" id="n1" role="navigation">
-  			<a href="/">Inicio</a>
-  			<a href="/quizes/question">Preguntas</a>
+  			<span><a href="/">Inicio</a></span>
+  			<span><a href="/quizes">Preguntas</a></span>
   		</nav>
   		<section class="main" id="s1">
-   	<%- body %> 
+   		<div> <%- body %> </div> 
   		</section>
   		<footer class="main" id="f1"> Pie </footer>
   	</div>

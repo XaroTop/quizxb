@@ -1,4 +1,3 @@
-    <h1><%= title %></h1>
-    <p> Bienvenido a <%= title %></p>
-    <p> <%=Respuesta %></p>
-    <a href="/quizes/question"> Intentalo otra vez <a/>
+    <p> <%= quiz.respuesta %></p>
+    <p> <%= Respuesta %></p>
+    <a href="/quizes/<%= quiz.id %>"> Intentalo otra vez </a>
