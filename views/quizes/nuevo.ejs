@@ -1,0 +1,9 @@
+
+ 		<form method="post" action="/quizes/crear">
+    	<p>  Crea una nueva pregunta para Quizz</p>
+    	<p>	<label for="preg" class="ren"> Pregunta: </label>
+    		<input type="text" name="quiz[pregunta]" value= "<%= quiz.pregunta %>"/> </p>
+    	<p>	<label for="resp" class="ren"> Respuesta: </label>
+    		<input type="text" name="quiz[respuesta]" value= "<%= quiz.respuesta %>"/> </p>
+    	<input type="submit" value="Enviar"/>
+    	</form>
