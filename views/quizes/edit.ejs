@@ -1,0 +1,7 @@
+    
+    <form method="post" action="/quizes/<%= quiz.id %>/?_method=put">
+    <input type="text" name="quiz[pregunta]" value="<%= quiz.pregunta%>"/>
+    <input type="text" name="quiz[respuesta]" value="<%= quiz.respuesta %>"/>
+    <input type="submit" value="Enviar"/>
+    </form>
+    

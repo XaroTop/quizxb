@@ -49,3 +49,19 @@ exports.nuevo = function(req, res) {
   	res.render('quizes/nuevo', {quiz: quiz});
   	
 };
+
+exports.edit = function(req, res) {
+	console.log("Acceso punto 5");
+	res.render('quizes/edit', { quiz: req.quiz });
+};
+
+
+exports.update = function(req, res) {
+	console.log("Acceso punto 6");	  
+  	req.quiz.pregunta = req.body.quiz.pregunta;
+  	req.quiz.respuesta = req.body.quiz.respuesta;
+  	req.quiz.save({fields: ["pregunta","respuesta"]}).then(function() {
+  	res.redirect('/quizes');});
+  	
+};
+
