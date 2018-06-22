@@ -22,6 +22,13 @@
   			<span><a href="/quizes">Preguntas</a></span>
   		</nav>
   		<section class="main" id="s1">
+        <% if (errors.length)  { %> 
+        <span id="Errores">  Corregir errores:
+          <% for (var i in errors) { %>
+            <span> <%=errors[i].msg%> </span><br/>
+            <% } %>
+        </span>
+        <% } %>
    		<div> <%- body %> </div> 
   		</section>
       <nav class="main" id="n2" role="navigation">
