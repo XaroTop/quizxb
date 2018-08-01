@@ -1,4 +1,5 @@
 var models = require('../models/models.js');
+var util = require('util');
 /* Controller question */
 
 exports.load = function (req, res, next, quizId) {
@@ -33,14 +34,14 @@ exports.answer = function(req, res) {
 /* Controller crear*/
 
 exports.crear = function(req, res) {
-		  
-  	
+		 debugger; 
+     var gafas =  util.inspect("");
+     console.log("Acceso punto 9", req.body.quiz, +"9B"+ gafas);
+     
   	var quiz = models.Quiz.build (req.body.quiz);
-  	quiz.validate().then(function(err){if (err)
-  		{res.render('quizes/nuevo', {quiz: quiz, errors : err.errors});}
-  		else {
-  	quiz.save({fields: ["pregunta","respuesta"]}).then(function() {
-  	res.redirect('/quizes');})}});
+  	console.log("Acceso punto 7 funcion crear");
+  	quiz.save({fields: ["pregunta", "respuesta"]}).then(function() {
+  	res.redirect('/quizes')});
   	
 };
 
@@ -48,8 +49,9 @@ exports.crear = function(req, res) {
 /* Controller crear*/
 
 exports.nuevo = function(req, res) {
-	var quiz = models.Quiz.build ({pregunta: "Pregunta", respuesta: "Respuesta"});	  
-  	res.render('quizes/nuevo', {quiz: quiz, errors: []});
+	var quiz1 = models.Quiz.build ({pregunta: "Pregunta", respuesta: "Respuesta"});
+  var prueba = "prueba"	  
+  	res.render('quizes/nuevo', {quiz: quiz1, prueba: prueba, errors: []});
   	
 };
 
